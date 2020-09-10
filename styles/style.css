@@ -1,0 +1,1800 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular/Montserrat-Regular.eot');
+    src: url('../fonts/Montserrat-Regular/Montserrat-Regular.woff') format('woff'), url('../fonts/Montserrat-Regular/Montserrat-Regular.ttf') format('truetype'), url('../fonts/Montserrat-Regular/Montserrat-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-SemiBold/Montserrat-SemiBold.eot');
+    src: url('../fonts/Montserrat-SemiBold/Montserrat-SemiBold.woff') format('woff'), url('../fonts/Montserrat-SemiBold/Montserrat-SemiBold.ttf') format('truetype'), url('../fonts/Montserrat-SemiBold/Montserrat-SemiBold.svg') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Bold/Montserrat-Bold.eot');
+    src: url('../fonts/Montserrat-Bold/Montserrat-Bold.woff') format('woff'), url('../fonts/Montserrat-Bold/Montserrat-Bold.ttf') format('truetype'), url('../fonts/Montserrat-Bold/Montserrat-Bold.svg') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+
+/* @font-face {
+font-family: 'Montserrat';
+src: url('../fonts/Montserrat-ExtraBold/Montserrat-ExtraBold.eot');
+src: url('../fonts/Montserrat-ExtraBold/Montserrat-ExtraBold.woff') format('woff'), url('../fonts/Montserrat-ExtraBold/Montserrat-ExtraBold.ttf') format('truetype'), url('../fonts/Montserrat-ExtraBold/Montserrat-ExtraBold.svg') format('svg');
+font-weight: 800;
+font-style: normal;
+} */
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+
+/* Контейнеры для отступов и адаптации */
+
+.fixed-container,
+.holder {
+    max-width: 1210px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0 20px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/* header */
+
+* header {
+    color: #FFFFFF;
+}
+
+header {
+    min-height: 100vh;
+    position: relative;
+}
+
+
+/* Backgorund for header */
+
+.header-background {
+    width: 100%;
+    height: 100%;
+    background: -o-linear-gradient(359.19deg, #E84141 36.47%, #E43939 59.49%);
+    background: linear-gradient(90.81deg, #E84141 36.47%, #E43939 59.49%);
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 59%, 0 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 59%, 0 100%);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+/* Вверхняя часть header */
+
+.header-top {
+    width: 100%;
+    padding-top: 31px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+
+/*  */
+
+.nav-left {
+    max-width: 375px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.logo {
+    max-width: 154px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.logo-text {
+    font-weight: 600;
+    font-size: 24.0543px;
+    line-height: 29px;
+}
+
+.number {
+    max-width: 110px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.number a {
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.nav-right {
+    max-width: 400px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.time-work,
+.address {
+    font-weight: 600;
+    font-size: 17.3191px;
+    line-height: 111.3%;
+}
+
+.time-work {
+    max-width: 187px;
+    width: 100%;
+}
+
+.nav-info-title {
+    font-weight: 700;
+    font-size: inherit;
+    line-height: 21px;
+}
+
+.address {
+    max-width: 186px;
+    width: 100%;
+}
+
+.header-content {
+    max-width: 1070px;
+    width: 100%;
+    margin: 51px auto 0;
+    padding: 0 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.header-content-info {
+    max-width: 470px;
+    width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    margin-top: 60px;
+}
+
+.title {
+    width: 100%;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 120%;
+    letter-spacing: 0.03em;
+}
+
+.header-description {
+    margin: 30px 0 40px;
+    font-size: 19px;
+    line-height: 23px;
+}
+
+.header-btn {
+    padding: 18px 56px;
+    background-color: #FFFFFF;
+    -webkit-box-shadow: 0px 0px 30px rgba(255, 253, 253, 0.5);
+    box-shadow: 0px 0px 30px rgba(255, 253, 253, 0.5);
+    border-radius: 100px;
+    border: none;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: capitalize;
+    color: #E53939;
+}
+
+.header-btn:hover,
+.header-btn:active,
+.header-btn:focus {
+    -webkit-box-shadow: 0px 0px 30px rgba(255, 253, 253, 0.8);
+    box-shadow: 0px 0px 30px rgba(255, 253, 253, 0.8);
+}
+
+
+/* Astimate Makisu in Yandex */
+
+section:first-child {
+    padding: 30px 0 24px;
+}
+
+.box-estimate {
+    max-width: 1070px;
+    width: 100%;
+    margin: 30px auto 0;
+    padding: 54px 52px;
+    border: 2px solid #A82D2D;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 8px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.box-estimate h2 {
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 66px;
+    color: #000000;
+}
+
+.box-estimate span {
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 66px;
+    color: #E92C2C;
+}
+
+
+/* Карусель */
+
+.product-block {
+    background: -o-linear-gradient(top, rgba(255, 249, 249, 0) 0%, rgba(255, 249, 249, 0.762712) 7.29%, #FFF9F9 90.62%, rgba(255, 249, 249, 0) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 249, 249, 0)), color-stop(7.29%, rgba(255, 249, 249, 0.762712)), color-stop(90.62%, #FFF9F9), to(rgba(255, 249, 249, 0)));
+    background: linear-gradient(180deg, rgba(255, 249, 249, 0) 0%, rgba(255, 249, 249, 0.762712) 7.29%, #FFF9F9 90.62%, rgba(255, 249, 249, 0) 100%);
+}
+
+.product-box {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.product-title,
+.product-title span {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 46px;
+    text-align: center;
+}
+
+.product-title span {
+    color: #E92C2C;
+}
+
+.slider {
+    max-width: 1170px;
+    width: 100%;
+    position: relative;
+    padding: 0 63px;
+}
+
+/**/
+.slider__item {
+    height: max-content;
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+    border: 2px solid #A82D2D;
+    border-radius: 10px;
+}
+
+.slider__item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.slider__item:focus {
+    outline: none;
+}
+
+.slick-list {
+    overflow: hidden;
+    display: flex;
+}
+
+.slick-track {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+}
+
+.slider .slick-dots {
+    min-height: 15px;
+    margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.slick-dots li {
+    margin: 0 6px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.slick-dots li.slick-active button {
+    width: 15px;
+    height: 15px;
+    background-color: #494949;
+    border-radius: 50%;
+    font-size: 0px;
+}
+
+.slick-dots li button {
+    width: 11px;
+    height: 11px;
+    padding: 0;
+    background-color: #8D8D8D;
+    border-radius: 50%;
+    font-size: 0px;
+}
+
+.slider .slick-arrow {
+    width: 33px;
+    height: 144px;
+    background: url('../img/vector.svg') 0 0 / 100% no-repeat;
+    background-size: cover;
+    font-size: 0;
+    position: absolute;
+    top: calc(50% - 72px - 15px);
+    z-index: 10;
+}
+
+.slider .slick-arrow.slick-prev {
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    left: 0;
+}
+
+.slider .slick-arrow.slick-next {
+    right: 0;
+}
+
+
+ul.short-list li:nth-child(n+5) {
+    display: none;
+}
+
+/* Product */
+
+.application-section {
+    padding: 30px 0;
+}
+
+.application-content {
+    max-width: 600px;
+    margin-top: 83px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.application-title {
+    max-width: 530px;
+    width: 100%;
+    margin-bottom: 49px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 46px;
+    text-align: center;
+}
+
+.application-title span {
+    color: #E92C2C;
+    font-weight: 700;
+}
+
+.application-block {
+    margin: 0 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.download-application-block {
+    max-width: 470px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.download-application {
+    max-width: 171px;
+    width: 100%;
+    text-decoration: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.download-application-title {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin: 36px auto 0;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+    color: #000000;
+}
+
+.red-line {
+    width: 3px;
+    height: 117px;
+    background-color: #E84141;
+    border-radius: 2px;
+}
+
+.application-phone {
+    max-width: 447px;
+    width: 100%;
+    height: 541px;
+    background: url(../img/application-mobile-phone.png) center center no-repeat;
+    background-size: contain;
+    position: relative;
+}
+
+.application {
+    text-align: center;
+}
+
+.application-smartphone {
+    width: 259px;
+    height: 22px;
+    font-size: 21px;
+    line-height: 15px;
+}
+
+.finger {
+    max-width: 170px;
+    max-height: 154px;
+    position: absolute;
+    top: 64%;
+    right: 22.4%;
+    /* animation: finger 4s linear 3 0.5s; */
+    opacity: 0;
+    display: none;
+}
+
+@-webkit-keyframes finger {
+    0% {
+        opacity: 1;
+    }
+
+    20% {
+        top: 64%;
+    }
+
+    79% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0.75;
+    }
+
+    86.7% {
+        opacity: 0.5;
+    }
+
+    93% {
+        opacity: 0.25;
+    }
+
+    100% {
+        top: 1%;
+        opacity: 0;
+    }
+}
+
+@keyframes finger {
+    0% {
+        opacity: 1;
+    }
+
+    20% {
+        top: 64%;
+    }
+
+    79% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0.75;
+    }
+
+    86.7% {
+        opacity: 0.5;
+    }
+
+    93% {
+        opacity: 0.25;
+    }
+
+    100% {
+        top: 1%;
+        opacity: 0;
+    }
+}
+
+
+/* footer */
+
+footer {
+    background: -o-linear-gradient(359.19deg, #E84141 36.47%, #E43939 59.49%);
+    background: linear-gradient(90.81deg, #E84141 36.47%, #E43939 59.49%);
+    -webkit-box-shadow: 0px 6px 20px rgba(162, 0, 0, 0.3);
+    box-shadow: 0px 6px 20px rgba(162, 0, 0, 0.3);
+    color: #FFFFFF;
+}
+
+.footer {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+}
+
+.footer-info {
+    max-width: 1170px;
+    width: 100%;
+    padding: 30px 0 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.footer-info-contact,
+.footer-info-work {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.footer-info-contact {
+    max-width: 313px;
+}
+
+.footer-info-work {
+    max-width: 465px;
+}
+
+
+/* Заголовок footer */
+
+.footer-title,
+.footer-number a {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.footer-title+p,
+.footer-title+p+p {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.footer-number a {
+    font-weight: 600;
+}
+
+
+/* Links on social-media */
+
+.footer-social-media {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+#footer-link {
+    padding-bottom: 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+
+/* Центрируем заголовок в footer-link-app*/
+
+.footer-link-app-container {
+    max-width: 260px;
+    width: 100%;
+}
+
+.footer-link-app-container .footer-title {
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.footer-link-app-block {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.footer-link-app-content {
+    max-width: 126px;
+    width: 100%;
+    height: 37px;
+    display: block;
+}
+
+.footer-link-app-content img {
+    width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+
+/* Text in footer-app-text */
+
+.footer-app-text p {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    font-size: 12px;
+}
+
+.footer-app-text h4 {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 17px;
+    text-transform: capitalize;
+}
+
+.miura-link {
+    font-weight: 500;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+@media(max-width: 1152px) {
+    .holder {
+        max-width: 1067.38px;
+        padding: 0 45px;
+    }
+
+    .nav-left {
+        max-width: 342px;
+    }
+
+    .logo {
+        max-width: 145px;
+    }
+
+    .logo-icon {
+        max-width: 47px;
+    }
+
+    .logo-text {
+        font-size: 21.9444px;
+        line-height: 27px;
+    }
+
+    .number a {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .nav-right {
+        max-width: 365px;
+    }
+
+    .time-work,
+    .address {
+        font-size: 15.8px;
+    }
+
+    .title {
+        font-weight: 800;
+        font-size: 42.1333px;
+        line-height: 120%;
+        letter-spacing: 0.03em;
+    }
+
+    .header-content {
+        max-width: 938px;
+        padding: 0;
+        margin: 44px 74px 0 56px;
+    }
+
+    .header-description {
+        font-size: 16.6778px;
+        line-height: 20px;
+    }
+
+    .header-btn {
+        width: -webkit-max-content;
+        width: -moz-max-content;
+        width: max-content;
+        padding: 15.8px 50px;
+        font-size: 15.8px;
+        line-height: 19px;
+        display: block;
+    }
+
+    .header-content-img {
+        max-width: 399px;
+    }
+
+    .box-estimate {
+        max-width: 940px;
+        padding: 48px 60px;
+    }
+
+    .box-estimate h2,
+    .box-estimate h2 span {
+        font-size: 47.4px;
+        line-height: 58px;
+    }
+
+    .box-estimate h2 {
+        max-width: 558.27px;
+    }
+
+    .five-stars {
+        max-width: 262px;
+        width: 100%;
+    }
+
+    /* Slider */
+    .product-title,
+    .product-title span {
+        font-size: 33.3556px;
+        line-height: 41px;
+    }
+
+    .slider .slick-arrow {
+        width: 29px;
+        height: 126px;
+        top: calc(50% - 72px - 15px);
+    }
+
+    .slider .slick-arrow.slick-next {
+        right: 15px;
+    }
+
+    .slider .slick-arrow.slick-prev {
+        left: 15px;
+    }
+
+    /* Application content */
+    .application-title {
+        margin-bottom: 43px;
+        font-size: 33.3556px;
+        line-height: 41px;
+    }
+
+    .download-application-block {
+        max-width: 412.56px;
+    }
+
+    .download-application {
+        max-width: 150px;
+    }
+
+    .download-application img {
+        max-width: 70.22px;
+    }
+
+    .download-application-title {
+        font-size: 24.5778px;
+        line-height: 30px;
+    }
+
+    .red-line {
+        width: 2.63px;
+        height: 102.7px;
+    }
+
+    /* Application on phone */
+    .application-phone {
+        max-width: 392.36px;
+    }
+
+    /* footer */
+    .footer-title,
+    .footer-number a {
+        font-size: 15.8px;
+        line-height: 19px;
+    }
+
+    .footer-info-contact {
+        max-width: 275px;
+    }
+
+    .footer-info-work {
+        max-width: 365px;
+    }
+
+    .footer-link-app-container {
+        max-width: 228px;
+    }
+
+    .footer-link-app-content {
+        max-width: 110px;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    .apple-logo-block svg {
+        max-width: 17px;
+        max-height: 22px;
+    }
+
+    .footer-app-text p {
+        font-size: 9px;
+    }
+
+    .footer-app-text h4 {
+        font-size: 11px;
+    }
+
+    .footer-title+p,
+    .footer-title+p+p {
+        font-size: 15.8px;
+        line-height: 111.3%;
+    }
+
+    .miura-link {
+        font-size: 12.2889px;
+        line-height: 15px;
+    }
+}
+
+@media(max-width: 1024px) {
+    .holder {
+        max-width: 928.89px;
+        padding: 0 48px;
+    }
+
+    header {
+        min-height: 0;
+    }
+
+    .nav-left {
+        max-width: 298px;
+    }
+
+    .logo {
+        max-width: 122px;
+    }
+
+    .logo-icon {
+        max-width: 39px;
+    }
+
+    .logo-text {
+        font-size: 21.9444px;
+        line-height: 27px;
+    }
+
+    .number {
+        max-width: 95px;
+    }
+
+    .number a {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .nav-right {
+        max-width: 318px;
+    }
+
+    .time-work,
+    .address {
+        font-size: 13.75px;
+    }
+
+    .title {
+        font-size: 36px;
+        letter-spacing: 0.03em;
+    }
+
+    .header-content {
+        max-width: 816px;
+        padding: 0;
+        margin: 39px auto 0;
+    }
+
+    .header-description {
+        font-size: 14.5139px;
+        line-height: 18px;
+    }
+
+    .header-btn {
+        padding: 13.75px 43px;
+        font-size: 13.75px;
+        line-height: 17px;
+    }
+
+    .header-content-img {
+        max-width: 347.57px;
+    }
+
+    /* Estimate at Yandex */
+    .box-estimate {
+        max-width: 818px;
+        padding: 41.5px 52px;
+    }
+
+    .box-estimate h2,
+    .box-estimate h2 span {
+        font-size: 41px;
+        line-height: 51px;
+    }
+
+    .box-estimate h2 {
+        max-width: 506.46px;
+    }
+
+    .five-stars {
+        max-width: 228.62px;
+    }
+
+    /* Slider - карусель */
+    .product-title,
+    .product-title span {
+        font-size: 29.0278px;
+        line-height: 35px;
+    }
+
+    .slider .slick-arrow {
+        width: 26px;
+        height: 110px;
+        top: calc(50% - 70px);
+    }
+
+    /* Application content */
+    .application-block {
+        max-width: 810px;
+        margin: 0 auto;
+    }
+
+    .application-title {
+        font-size: 29.0278px;
+        line-height: 35px;
+    }
+
+    .application-content {
+        max-width: 459px;
+        margin-top: 0;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .download-application-block {
+        max-width: 359.03px;
+    }
+
+    .download-application {
+        max-width: 131.39px;
+    }
+
+    .download-application img {
+        max-width: 61.11px;
+    }
+
+    .download-application-title {
+        font-size: 21px;
+        line-height: 30px;
+    }
+
+    .red-line {
+        width: 2.29px;
+        height: 89.38px;
+        margin-bottom: 12px;
+    }
+
+    /* Application on phone */
+    .application-phone {
+        max-width: 341.46px;
+    }
+
+    /* footer */
+    .footer-info-contact {
+        max-width: 240px;
+    }
+
+    .footer-info-work {
+        max-width: 305px;
+    }
+
+    .footer-title,
+    .footer-number a {
+        font-size: 13.75px;
+        line-height: 17px;
+    }
+
+    .footer-social-media {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    .footer-app-text p {
+        font-size: 9px;
+    }
+
+    .footer-title+p,
+    .footer-title+p+p {
+        font-size: 13.75px;
+        line-height: 111.3%;
+    }
+
+    .miura-link {
+        font-size: 11px;
+        line-height: 13px;
+    }
+
+    .google_Play,
+    .app_store {
+        max-width: 73.59px;
+    }
+}
+
+@media(max-width: 768px) {
+    .holder {
+        max-width: 710px;
+        padding: 0 48px;
+    }
+
+    .nav-left {
+        max-width: 230px;
+    }
+
+    .logo {
+        max-width: 100px;
+    }
+
+    .logo-icon {
+        max-width: 29.79px;
+    }
+
+    .logo-text {
+        font-size: 14.6px;
+        line-height: 18px;
+    }
+
+    .number {
+        max-width: 70px;
+    }
+
+    .number img {
+        width: 14.02px;
+    }
+
+    .number a {
+        font-size: 11px;
+        line-height: 13px;
+    }
+
+    .nav-right {
+        max-width: 250px;
+    }
+
+    .time-work,
+    .address {
+        font-size: 10.5px;
+    }
+
+    .title {
+        font-size: 28.0333px;
+        letter-spacing: 0.03em;
+    }
+
+    .header-content {
+        max-width: 622px;
+        padding: 0;
+    }
+
+    .header-content-info {
+        max-width: 274px;
+        margin-top: 35px;
+    }
+
+    .header-description {
+        font-size: 11.0965px;
+        line-height: 14px;
+    }
+
+    .header-btn {
+        width: 116px;
+        padding: 10.51px 32.71px;
+        font-size: 10.5125px;
+        line-height: 13px;
+    }
+
+    .header-content-img {
+        max-width: 265.73px;
+    }
+
+    /* Estimate at Yandex */
+    .box-estimate {
+        max-width: 625.49px;
+        padding: 32px 40px;
+    }
+
+    .box-estimate h2,
+    .box-estimate h2 span {
+        font-size: 32.8577px;
+        line-height: 40px;
+    }
+
+    .box-estimate h2 {
+        max-width: 387.21px;
+    }
+
+    .five-stars {
+        max-width: 160px;
+    }
+
+    /* Slider - карусель */
+    .product-title,
+    .product-title span {
+        font-size: 22.1931px;
+        line-height: 27px;
+    }
+
+    .slider .slick-arrow {
+        width: 19px;
+        height: 84px;
+        top: calc(50% - 60px);
+    }
+
+    /* Application content */
+    .application-title {
+        font-size: 22.1931px;
+        line-height: 27px;
+    }
+
+    .download-application-block {
+        max-width: 274.49px;
+    }
+
+    .download-application {
+        max-width: 99.28px;
+    }
+
+    .download-application img {
+        max-width: 46.72px;
+    }
+
+    .download-application-title {
+        font-size: 16.3528px;
+        line-height: 20px;
+        margin: 20.44px auto 0;
+    }
+
+    .red-line {
+        width: 2.29px;
+        height: 89.38px;
+        margin-bottom: 12px;
+    }
+
+    /* Application on phone */
+    .application-block {
+        max-width: 620px;
+    }
+
+    .application-content {
+        max-width: 350px;
+    }
+
+    .application-title {
+        font-size: 21px;
+        line-height: 27px;
+    }
+
+    .application-phone {
+        max-width: 280px;
+        height: 320px;
+    }
+
+    /* footer */
+    .footer-title,
+    .footer-number a {
+        font-size: 10.5125px;
+        line-height: 13px;
+    }
+
+    .footer-social-media img {
+        max-width: 18.69px;
+    }
+
+    .footer-link-app-block {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .footer-link-app-content:nth-child(2) {
+        margin-top: 3px;
+    }
+
+    .footer-app-text p {
+        font-size: 8px;
+    }
+
+    .footer-title+p,
+    .footer-title+p+p {
+        font-size: 8px;
+        line-height: 111.3%;
+    }
+
+    .miura-link {
+        font-size: 8.17639px;
+        line-height: 10px;
+    }
+}
+
+@media(max-width:667px) {
+
+    /* Обёртки */
+    .holder,
+    .fixed-container {
+        max-width: 624px;
+        padding: 0 21px;
+    }
+
+    /* Background of header */
+    .header-background {
+        -webkit-clip-path: none;
+        clip-path: none;
+    }
+
+    /* Logo */
+    .header-top {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .nav-left {
+        max-width: 100%;
+        width: -webkit-max-content;
+        width: -moz-max-content;
+        width: max-content;
+    }
+
+    .logo {
+        max-width: inherit;
+    }
+
+    .logo-icon {
+        max-width: 47px;
+    }
+
+    .logo-text {
+        font-size: 60.4747px;
+        line-height: 74px;
+    }
+
+    /* Лишние элементы */
+    .number,
+    .nav-right,
+    .header-content-img,
+    .header-btn,
+    #estimate-section {
+        display: none;
+    }
+
+    /* Content of header */
+    .header-content {
+        max-width: 570px;
+        padding: 0;
+        margin: 0 auto;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .header-content-info {
+        max-width: inherit;
+        width: 100%;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 59.3999px;
+        line-height: 120%;
+        letter-spacing: 0.03em;
+    }
+
+    .header-description {
+        font-size: 23.5125px;
+        line-height: 29px;
+        text-align: center;
+    }
+
+    /* Slider - карусель */
+    .product-title {
+        margin: 25px 0 16px;
+    }
+
+    .slider .slick-arrow {
+        width: 15px;
+        height: 70px;
+        top: calc(50% - 50px);
+    }
+
+    /* Application */
+    .application-section {
+        padding: 35px 0;
+    }
+
+    .application-content {
+        max-width: 472px;
+        font-size: 30.3494px;
+        line-height: 37px;
+        text-align: center;
+    }
+
+    .application-title {
+        font-size: 30px;
+        line-height: 37px;
+    }
+
+    .application-phone {
+        max-width: 230px;
+        max-height: 330px;
+    }
+
+    .download-application-block {
+        max-width: 375px;
+    }
+
+    .download-application {
+        max-width: 137px;
+    }
+
+    .download-application img {
+        max-width: 64px;
+    }
+
+    .download-application-title {
+        font-size: 22px;
+        line-height: 27px;
+    }
+
+    .red-line {
+        width: 2.4px;
+        height: 93px;
+    }
+
+    /* footer */
+    .footer-info {
+        font-size: 16.6483px;
+        line-height: 111.3%;
+        padding: 21.34px 0 8px;
+    }
+
+    .footer-info-work-block:nth-child(2) {
+        margin-top: 12px;
+    }
+
+    .footer-title,
+    .footer-number a {
+        font-size: 17px;
+        line-height: 21px;
+    }
+
+    .footer-number a {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    .footer-number+div {
+        margin-top: 5px;
+    }
+
+    .footer-social-media img {
+        max-width: 30.31px;
+    }
+
+    .footer-title+p,
+    .footer-title+p+p {
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 111.3%;
+    }
+
+    .footer-link-app-container {
+        max-width: 206.12px;
+    }
+
+    .footer-link-app-container .footer-title {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .footer-link-app-content {
+        max-width: 144.07px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .footer-link-app-content img {
+        max-width: inherit;
+    }
+
+    .footer-info {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+
+    .footer-info-contact {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    }
+
+    .footer-info-work {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .miura-link {
+        font-weight: 600;
+        font-size: 14.3796px;
+    }
+
+    #footer-link {
+        padding-bottom: 10px;
+    }
+}
+
+@media(max-width: 414px) {
+
+    /* header */
+    .title {
+        font-size: 40px;
+    }
+
+    .header-description {
+        font-size: 21px;
+    }
+
+    /* Slider */
+    .slider__item {
+        margin: 0 10px;
+    }
+
+    .slick-dots {
+        display: none !important;
+    }
+
+    .slider .slick-arrow {
+        top: calc(50% - 35px);
+    }
+
+    /* Application */
+    .application-section {
+        padding: 17px 0 30px;
+    }
+
+    .application-block {
+        max-height: 203px;
+        height: 100%;
+    }
+
+    .application-title {
+        font-size: 21px;
+        line-height: 20px;
+        margin-bottom: 22px;
+    }
+
+    .download-application-block {
+        max-width: 182px;
+    }
+
+    .download-application {
+        max-width: 75.27px;
+        max-height: 65.2px;
+    }
+
+    .download-application img {
+        max-width: 35px;
+    }
+
+    .download-application-title {
+        margin-top: 5px;
+        font-size: 12.2529px;
+        line-height: 15px;
+    }
+
+    .red-line {
+        width: 1.31px;
+        height: 51.2px;
+    }
+
+    .application-phone {
+        max-width: 126px;
+        max-height: 220px;
+    }
+
+    /* Подвал */
+    .footer-number a {
+        font-size: 12.1452px;
+        line-height: 15px;
+    }
+
+    .footer-title,
+    .footer-number a {
+        font-size: 14px;
+        line-height: 15px;
+    }
+
+    .footer-social-media {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    .footer-social-media img {
+        max-width: 17px;
+    }
+
+    .footer-info-work .footer-title {
+        font-size: 9px;
+        line-height: 11px;
+    }
+
+    .footer-info-work-block:nth-child(2) {
+        margin-top: 7px;
+    }
+
+    .footer-info-work-block p {
+        font-size: 9px;
+        line-height: 111.3%;
+    }
+
+    .footer-link-app-container .footer-title {
+        font-size: 11px;
+        line-height: 10px;
+    }
+
+    .footer-link-app-content {
+        max-width: 81px;
+        max-height: 24px;
+    }
+
+    .footer-link-app-container {
+        max-width: 116px;
+    }
+
+    .footer-info-contact h2 {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .footer-title+p,
+    .footer-title+p+p {
+        font-size: 9px;
+    }
+
+    #footer-link {
+        padding-bottom: 6px;
+    }
+
+    .miura-link {
+        margin-top: 0;
+        font-size: 8px;
+        line-height: 10px;
+    }
+}
+
+@media(max-width:375px) {
+
+    /* Обёртки */
+    .holder,
+    .fixed-container {
+        max-width: 350px;
+        padding: 0 21px;
+    }
+
+    .fixed-container {
+        padding: 0 12px;
+    }
+
+    /* Logo */
+    .logo-icon {
+        max-width: 47px;
+    }
+
+    .logo-text {
+        font-size: 34px;
+        line-height: 41px;
+    }
+
+    .title {
+        font-size: 33.3957px;
+        line-height: 120%;
+    }
+
+    .header-description {
+        margin: 8px 0 17px;
+        font-size: 13.2191px;
+        line-height: 16px;
+    }
+
+    .header-content-info {
+        margin: 0 auto;
+    }
+
+    /* Slider - карусель */
+    .slider .slick-arrow {
+        width: 15px;
+        height: 70px;
+    }
+
+    /* Application */
+    .application-title {
+        font-size: 16.629px;
+    }
+
+    .footer-title,
+    .footer-number a {
+        font-size: 11px;
+    }
+
+    .footer-link-app-container .footer-title {
+        font-size: 8px;
+    }
+}
