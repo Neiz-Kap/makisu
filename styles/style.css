@@ -320,7 +320,7 @@ section:first-child {
     position: relative;
 }
 
-.slider__item p {
+.slider__title {
     padding: 4px 29px;
     background: linear-gradient(94.18deg, #FF6767 0%, #F6506A 92.71%, #F54E6A 100%);
     position: absolute;
@@ -329,7 +329,7 @@ section:first-child {
     top: 10px;
 }
 
-.slider__item p,
+.slider__title,
 .miura-link {
     font-weight: 500;
     font-size: 14px;
@@ -414,6 +414,33 @@ section:first-child {
     position: absolute;
     top: calc(50% - 72px - 15px);
     z-index: 10;
+}
+
+.slider .slick-arrow:focus .slider__title:nth-child(3n+1) {
+    animation: sliderTitleName 3s;
+}
+
+.slider .slick-arrow:focus .slider__title:nth-child(3n+2) {
+    animation: sliderTitleName 3s 3, 5s;
+}
+
+.slider .slick-arrow:focus .slider__title:nth-child(3n+1) {
+    animation: sliderTitleName 3s 7s;
+}
+
+.slider__item.slider__title.in-view {
+    background-color: black;
+    animation: sliderTitleName 3s;
+}
+
+@keyframes sliderTitleName {
+    from {
+        transform: translate(-100%, 0);
+    }
+
+    to {
+        transform: translate(0%, 0);
+    }
 }
 
 .slider .slick-arrow.slick-prev {
@@ -771,30 +798,38 @@ footer {
         max-width: 1067.38px;
         padding: 0 45px;
     }
+
     .nav-left {
         max-width: 280px;
     }
+
     .logo {
         max-width: 145px;
     }
+
     .logo-icon {
         max-width: 47px;
     }
+
     .logo-text {
         font-size: 21.9444px;
         line-height: 27px;
     }
+
     .number a {
         font-size: 16px;
         line-height: 19px;
     }
+
     .nav-right {
         max-width: 365px;
     }
+
     .time-work,
     .address {
         font-size: 15.8px;
     }
+
     .title {
         max-width: 390px;
         font-weight: 800;
@@ -802,14 +837,17 @@ footer {
         line-height: 120%;
         letter-spacing: 0.03em;
     }
+
     .header-content {
         max-width: 938px;
     }
+
     .header-description {
         max-width: 360px;
         font-size: 16.6778px;
         line-height: 20px;
     }
+
     .header-btn {
         width: -webkit-max-content;
         width: -moz-max-content;
@@ -819,25 +857,31 @@ footer {
         line-height: 19px;
         display: block;
     }
+
     .header-content-img {
         max-width: 399px;
     }
+
     .box-estimate {
         max-width: 940px;
         padding: 48px 60px;
     }
+
     .box-estimate h2,
     .box-estimate h2 span {
         font-size: 47px;
         line-height: 58px;
     }
+
     .box-estimate h2 {
         max-width: 558px;
     }
+
     .five-stars {
         max-width: 262px;
         width: 100%;
     }
+
     /* Slider */
     .product-title,
     .product-title span,
@@ -846,83 +890,104 @@ footer {
         font-size: 33px;
         line-height: 41px;
     }
-    .slider__item p,
+
+    .slider__title,
     .miura-link {
         font-size: 12px;
         line-height: 15px;
     }
+
     .slider .slick-arrow {
         width: 29px;
         height: 126px;
         top: calc(50% - 72px - 15px);
     }
+
     .slider .slick-arrow.slick-next {
         right: 15px;
     }
+
     .slider .slick-arrow.slick-prev {
         left: 15px;
     }
+
     /* Application content */
     .application-title,
     .application-title span {
         margin-bottom: 43px;
     }
+
     .download-application-block {
         max-width: 412.56px;
     }
+
     .download-application-block h3 {
         font-size: 26px;
         line-height: 32px;
     }
+
     .download-application {
         max-width: 150px;
     }
+
     .download-application img {
         max-width: 70.22px;
     }
+
     .download-application-title {
         font-size: 24.5778px;
         line-height: 30px;
     }
+
     .red-line {
         width: 2.63px;
         height: 102.7px;
     }
+
     /* Application on phone */
     .application-phone {
         max-width: 392.36px;
     }
+
     /* footer */
     .footer-title,
     .footer-number a {
         font-size: 15.8px;
         line-height: 19px;
     }
+
     .footer-info-contact {
         max-width: 275px;
     }
+
     .footer-info-work {
         max-width: 365px;
     }
+
     .footer-link-app-container {
         max-width: 228px;
     }
+
     .footer-link-app-content {
         max-width: 110px;
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
         justify-content: space-between;
     }
+
     .apple-logo-block svg {
         max-width: 17px;
         max-height: 22px;
     }
+
     .footer-app-text p {
         font-size: 9px;
     }
+
     .footer-app-text h4 {
         font-size: 11px;
     }
+
     .footer-title+p,
     .footer-title+p+p {
         font-size: 15.8px;
@@ -935,99 +1000,123 @@ footer {
         max-width: 929px;
         padding: 0 48px;
     }
+
     header {
         min-height: 0;
     }
+
     .nav-left {
         max-width: 250px;
     }
+
     .logo {
         max-width: 122px;
     }
+
     .logo-icon {
         max-width: 39px;
     }
+
     .logo-text {
         font-size: 22px;
         line-height: 27px;
     }
+
     .number {
         max-width: 95px;
     }
+
     .number a {
         font-size: 14px;
         line-height: 17px;
     }
+
     .nav-right {
         max-width: 318px;
     }
+
     .time-work,
     .address {
         font-size: 14px;
     }
+
     .title {
         font-size: 36px;
         letter-spacing: 0.03em;
     }
+
     .header-content {
         max-width: 816px;
         padding: 0;
         margin: 39px auto 0;
     }
+
     .header-description {
         font-size: 14.5139px;
         line-height: 18px;
     }
+
     .header-btn {
         padding: 14px 43px;
         font-size: 14px;
         line-height: 17px;
     }
+
     .header-content-img {
         max-width: 347.57px;
     }
+
     /* Estimate at Yandex */
     .box-estimate {
         max-width: 818px;
         padding: 41.5px 52px;
     }
+
     .box-estimate h2,
     .box-estimate h2 span {
         font-size: 41px;
         line-height: 51px;
     }
+
     .box-estimate h2 {
         max-width: 506.46px;
     }
+
     .five-stars {
         max-width: 228.62px;
     }
+
     /* Slider - карусель */
     .product-title,
     .product-title span {
         font-size: 29px;
         line-height: 35px;
     }
-    .slider__item p,
+
+    .slider__title,
     .miura-link {
         font-size: 11px;
         line-height: 13px;
     }
+
     .slider .slick-arrow {
         width: 26px;
         height: 110px;
         top: calc(50% - 70px);
     }
+
     /* Application content */
     .application-block {
         max-width: 810px;
         margin: 0 auto;
     }
+
     .application-title,
     .application-title span {
         font-size: 29.0278px;
         line-height: 35px;
     }
+
     .application-content {
         max-width: 459px;
         margin-top: 0;
@@ -1035,57 +1124,71 @@ footer {
         -ms-flex-pack: center;
         justify-content: center;
     }
+
     .download-application-block {
         max-width: 360px;
     }
+
     .download-application-block h3 {
         font-size: 22px;
         line-height: 27px;
     }
+
     .download-application {
         max-width: 131.39px;
     }
+
     .download-application img {
         max-width: 61.11px;
     }
+
     .download-application-title {
         font-size: 21px;
         line-height: 30px;
     }
+
     .red-line {
         width: 2.29px;
         height: 89.38px;
         margin-bottom: 12px;
     }
+
     /* Application on phone */
     .application-phone {
         max-width: 300px;
     }
+
     /* footer */
     .footer-info-contact {
         max-width: 240px;
     }
+
     .footer-info-work {
         max-width: 305px;
     }
+
     .footer-title,
     .footer-number a {
         font-size: 14px;
         line-height: 17px;
     }
+
     .footer-social-media {
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
         justify-content: space-between;
     }
+
     .footer-app-text p {
         font-size: 9px;
     }
+
     .footer-title+p,
     .footer-title+p+p {
         font-size: 14px;
         line-height: 111.3%;
     }
+
     .google_Play,
     .app_store {
         max-width: 73.59px;
@@ -1097,20 +1200,25 @@ footer {
         max-width: 165px;
         margin-right: 15px;
     }
+
     .footer-link-app-container {
         max-width: 210px;
     }
+
     .footer-link-app-content {
         max-width: 100px;
     }
+
     .footer-info-work {
         max-width: 290px;
         margin-left: 25px;
     }
+
     .footer-title,
     .footer-number a {
         font-size: 13px;
     }
+
     .footer-title+p,
     .footer-title+p+p {
         font-size: 12px;
@@ -1118,6 +1226,7 @@ footer {
 }
 
 @media(max-width: 850px) {
+
     .box-estimate h2,
     .box-estimate h2>span {
         max-width: 420px;
@@ -1126,13 +1235,13 @@ footer {
 }
 
 @media(max-width: 830px) {
-    .slider__item p {
+    .slider__title {
         font-size: 10px;
     }
 }
 
 @media (max-width: 770px) {
-    .slider__item p {
+    .slider__title {
         font-size: 14px;
     }
 }
@@ -1142,150 +1251,187 @@ footer {
         max-width: 710px;
         padding: 0 48px;
     }
+
     .nav-left {
         max-width: 185px;
     }
+
     .logo {
         max-width: 100px;
     }
+
     .logo-icon {
         max-width: 29.79px;
     }
+
     .logo-text {
         font-size: 14.6px;
         line-height: 18px;
     }
+
     .number {
         max-width: 70px;
     }
+
     .number img {
         width: 14.02px;
     }
+
     .number a {
         font-size: 11px;
         line-height: 13px;
     }
+
     .nav-right {
         max-width: 250px;
     }
+
     .time-work,
     .address {
         font-size: 10.5px;
     }
+
     .title {
         font-size: 28px;
         letter-spacing: 0.03em;
     }
+
     .header-content {
         max-width: 622px;
         padding: 0;
     }
+
     .header-content-info {
         max-width: 274px;
         margin-top: 35px;
     }
+
     .header-description {
         font-size: 11.0965px;
         line-height: 14px;
     }
+
     .header-btn {
         width: 116px;
         padding: 10.51px 33px;
         font-size: 10.5125px;
         line-height: 13px;
     }
+
     .header-content-img {
         max-width: 266px;
     }
+
     /* Estimate at Yandex */
     .box-estimate {
         max-width: 625px;
         padding: 32px 40px;
     }
+
     .box-estimate h2,
     .box-estimate h2 span {
         font-size: 33px;
         line-height: 40px;
     }
+
     .box-estimate h2 {
         max-width: 387.21px;
     }
+
     .five-stars {
         max-width: 160px;
     }
+
     /* Slider - карусель */
     .product-title,
     .product-title span {
         font-size: 26px;
         line-height: 27px;
     }
-    .slider__item p,
+
+    .slider__title,
     .miura-link {
         font-size: 8px;
         line-height: 10px;
     }
-    .slider__item p {
+
+    .slider__title {
         font-size: 14px;
     }
+
     .slider .slick-arrow {
         width: 19px;
         height: 84px;
         top: calc(50% - 60px);
     }
+
     /* Application content */
     .application-title,
     .application-title span {
         font-size: 22px;
         line-height: 27px;
     }
+
     .download-application-block {
         max-width: 274px;
     }
+
     .download-application-block h3 {
         font-size: 18px;
         line-height: 22px;
     }
+
     .download-application {
         max-width: 99.28px;
     }
+
     .download-application img {
         max-width: 46.72px;
     }
+
     .download-application-title {
         font-size: 16px;
         line-height: 20px;
         margin: 20.44px auto 0;
     }
+
     .red-line {
         width: 2.29px;
         height: 89.38px;
         margin-bottom: 12px;
     }
+
     /* Application on phone */
     .application-block {
         max-width: 620px;
     }
+
     .application-content {
         max-width: 350px;
     }
+
     .application-title,
     .application-title span {
         font-size: 21px;
         line-height: 27px;
     }
+
     .application-phone {
         max-width: 280px;
         height: 320px;
     }
+
     /* footer */
     .footer-title,
     .footer-number a {
         font-size: 10.5125px;
         line-height: 13px;
     }
+
     .footer-social-media img {
         max-width: 18.69px;
     }
+
     .footer-link-app-block {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1298,18 +1444,23 @@ footer {
         -ms-flex-align: center;
         align-items: center;
     }
+
     .footer-link-app-container {
         max-width: 155px;
     }
+
     .footer-link-app-content:nth-child(2) {
         margin-top: 3px;
     }
+
     .footer-info-work {
         max-width: 230px;
     }
+
     .footer-app-text p {
         font-size: 8px;
     }
+
     .footer-title+p,
     .footer-title+p+p {
         font-size: 10px;
@@ -1318,39 +1469,47 @@ footer {
 }
 
 @media(max-width: 667px) {
+
     /* Обёртки */
     .holder,
     .fixed-container {
         max-width: 624px;
         padding: 0 21px;
     }
+
     /* Background of header */
     .header-background {
         -webkit-clip-path: none;
         clip-path: none;
     }
+
     /* Logo */
     .header-top {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
     }
+
     .nav-left {
         max-width: 100%;
         width: -webkit-max-content;
         width: -moz-max-content;
         width: max-content;
     }
+
     .logo {
         max-width: inherit;
     }
+
     .logo-icon {
         max-width: 47px;
     }
+
     .logo-text {
         font-size: 60.4747px;
         line-height: 74px;
     }
+
     /* Лишние элементы */
     .number,
     .nav-right,
@@ -1359,6 +1518,7 @@ footer {
     #estimate-section {
         display: none;
     }
+
     /* Content of header */
     .header-content {
         max-width: 570px;
@@ -1368,10 +1528,12 @@ footer {
         -ms-flex-pack: center;
         justify-content: center;
     }
+
     .header-content-info {
         max-width: inherit;
         width: 100%;
     }
+
     .title {
         max-width: 100%;
         text-align: center;
@@ -1379,73 +1541,90 @@ footer {
         line-height: 120%;
         letter-spacing: 0.03em;
     }
+
     .header-description {
         max-width: 100%;
         font-size: 23.5125px;
         line-height: 29px;
         text-align: center;
     }
+
     /* Slider - карусель */
     .product-title {
         margin: 25px 0 16px;
     }
-    .slider__item p,
+
+    .slider__title,
     .miura-link {
         font-size: 14px;
         font-weight: 600;
     }
-    .slider__item p {
+
+    .slider__title {
         font-size: 12px;
     }
+
     .slider .slick-arrow {
         width: 16px;
         height: 70px;
         top: calc(50% - 50px);
     }
+
     /* Application */
     .application-section {
         padding: 35px 0;
     }
+
     .application-content {
         max-width: 472px;
         font-size: 30.3494px;
         line-height: 37px;
         text-align: center;
     }
+
     .application-title,
     .application-title span {
         font-size: 26px;
         line-height: 37px;
     }
+
     .application-phone {
         max-width: 230px;
         max-height: 330px;
     }
+
     .download-application-block {
         max-width: 320px;
     }
+
     .download-application-block h3 {
         font-size: 26px;
         line-height: 32px;
     }
+
     .download-application-block h3 {
         font-size: 26px;
         line-height: 32px;
     }
+
     .download-application {
         max-width: 137px;
     }
+
     .download-application img {
         max-width: 58px;
     }
+
     .download-application-title {
         font-size: 22px;
         line-height: 27px;
     }
+
     .red-line {
         width: 2.4px;
         height: 93px;
     }
+
     /* footer */
     .footer-info {
         font-size: 16.6483px;
@@ -1455,46 +1634,57 @@ footer {
         -ms-flex-align: start;
         align-items: flex-start;
     }
+
     .footer-info-work-block:nth-child(2) {
         margin-top: 12px;
     }
+
     .footer-title,
     .footer-number a {
         font-size: 16px;
         line-height: 21px;
     }
+
     .footer-link-app-container .footer-title {
         font-size: 14px;
         line-height: 17px;
     }
+
     .footer-number a {
         font-weight: 600;
         font-size: 22px;
         line-height: 26px;
     }
+
     .footer-number+div {
         margin-top: 5px;
     }
+
     .footer-social-media img {
         max-width: 30.31px;
     }
+
     .footer-title+p,
     .footer-title+p+p {
         font-weight: 600;
-        font-size: 17px;
+        font-size: 16px;
         line-height: 111.3%;
     }
+
     .footer-link-app-container {
         max-width: 206.12px;
     }
+
     .footer-link-app-content {
         max-width: 144.07px;
         height: auto;
         margin: 0 auto;
     }
+
     .footer-link-app-content img {
         max-width: inherit;
     }
+
     .footer-info-contact {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1510,6 +1700,7 @@ footer {
         -ms-flex-pack: start;
         justify-content: flex-start;
     }
+
     .footer-info-work {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1522,32 +1713,38 @@ footer {
         -ms-flex-align: start;
         align-items: flex-start;
     }
+
     #footer-link {
         padding-bottom: 10px;
     }
 }
 
 @media(max-width: 610px) {
-    .slider__item p {
+    .slider__title {
         font-size: 15px;
         padding: 7px 29px;
     }
+
     .slick-dots {
         display: none !important;
     }
+
     .footer-info-work {
         margin-left: 17px;
         line-height: 111.3%;
     }
+
     .footer-info-work-block:nth-child(2) {
         margin-top: 12px;
     }
+
     .footer-link-app-container .footer-title {
-        font-size: 12px;
+        font-size: 15px;
     }
+
     .footer-title+p,
     .footer-title+p+p {
-        font-size: 16px;
+        font-size: 15px;
     }
 }
 
@@ -1555,21 +1752,23 @@ footer {
     .download-application {
         max-width: 120px;
     }
+
     .download-application-block h3 {
         font-size: 23px;
     }
+
     .download-application img {
         max-width: 48px;
     }
+
     .download-application-title {
         font-size: 18px;
     }
+
     .footer-info-work {
         margin-left: 25px;
     }
-    .footer-link-app-container .footer-title {
-        font-size: 11px;
-    }
+
     .footer-title+p,
     .footer-title+p+p {
         font-size: 14px;
@@ -1577,26 +1776,28 @@ footer {
 }
 
 @media(max-width: 535px) {
+
     .application-title,
     .application-title span {
         font-size: 22px;
     }
+
     .download-application {
         max-width: 113px;
     }
+
     .application-phone {
         max-width: 206px;
     }
-    .footer-link-app-container .footer-title {
-        font-size: 10px;
-    }
+
     .footer-title+p,
     .footer-title+p+p {
-        font-size: 14px;
+        font-size: 13px;
     }
 }
 
 @media(max-width: 530px) {
+
     .footer-title+p,
     .footer-title+p+p {
         font-size: 13px;
@@ -1604,39 +1805,34 @@ footer {
     }
 }
 
-@media(max-width: 510px) {
-    .footer-link-app-container,
-    .footer-title {
-        max-width: 490px;
-        font-size: 10px;
-    }
-}
-
 @media(max-width: 500px) {
+
     .application-title,
     .application-title span {
         font-size: 20px;
     }
+
     .download-application {
         max-width: 110px;
     }
+
     .download-application img {
         max-width: 40px;
     }
+
     .download-application-title {
         font-size: 16px;
     }
-    .footer-link-app-container .footer-title {
-        font-size: 9px;
-        max-width: 130px;
-    }
+
     .footer-link-app-container {
         max-width: 130px;
     }
+
     .footer-title+p,
     .footer-title+p+p {
-        font-size: 13px;
+        font-size: 12px;
     }
+
     .application-phone {
         max-width: 190px;
     }
@@ -1646,88 +1842,137 @@ footer {
     .application-title {
         margin-bottom: 25px;
     }
+
     .footer-link-app-container {
         max-width: 150px;
     }
+
+    .footer-title+p,
+    .footer-title+p+p {
+        font-size: 11px;
+        max-width: 150px;
+    }
+}
+
+@media(max-width: 465px) {
+
+    .footer-title+p,
+    .footer-title+p+p {
+        font-size: 11px;
+        max-width: 150px;
+    }
+}
+
+@media(max-width: 467px) {
+    .footer-info-work-block p {
+        font-size: 11px;
+    }
+}
+
+@media(max-width: 450px) {
     .footer-link-app-container .footer-title {
-        font-size: 13px;
-        max-width: 120px;
+        font-size: 14px;
+    }
+
+    .footer-title+p,
+    .footer-title+p+p {
+        font-size: 10px;
+        max-width: 150px;
     }
 }
 
 @media(max-width: 414px) {
+
     /* header */
     .title {
         font-size: 40px;
     }
+
     .header-description {
         font-size: 21px;
     }
+
     /* Slider */
     .slider__item {
         margin: 0 10px;
     }
+
     .miura-link {
         font-size: 8px;
         line-height: 10px;
     }
-    .slider__item p {
+
+    .slider__title {
         padding: 5px 29px;
         font-size: 13px;
     }
+
     .slider .slick-arrow {
         top: calc(50% - 35px);
     }
+
     /* Application */
     .application-section {
         padding: 17px 0 30px;
     }
+
     .application-block {
         max-height: 203px;
         height: 100%;
     }
+
     .application-title,
     .application-title span {
         font-size: 21px;
         line-height: 20px;
         margin-bottom: 22px;
     }
+
     .download-application-block {
         max-width: 182px;
     }
+
     .download-application-block h3 {
         font-size: 14px;
         line-height: 17px;
     }
+
     .download-application {
         max-width: 75.27px;
         max-height: 65.2px;
     }
+
     .download-application img {
         max-width: 35px;
     }
+
     .download-application-title {
         margin-top: 5px;
         font-size: 12.2529px;
         line-height: 15px;
     }
+
     .red-line {
         height: 51.2px;
     }
+
     .application-phone {
         max-width: 126px;
         max-height: 220px;
     }
+
     /* Подвал */
     .footer-number a {
         font-size: 12.1452px;
         line-height: 15px;
     }
+
     .footer-title,
     .footer-number a {
         font-size: 14px;
         line-height: 15px;
     }
+
     .footer-social-media {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1736,93 +1981,116 @@ footer {
         -ms-flex-pack: justify;
         justify-content: space-between;
     }
+
     .footer-social-media img {
         max-width: 17px;
     }
+
     .footer-info-contact {
         max-width: 100px;
     }
+
     .footer-info-work .footer-title {
         font-size: 9px;
         line-height: 11px;
     }
+
     .footer-info-work-block:nth-child(2) {
         margin-top: 7px;
     }
+
     .footer-info-work-block p {
         font-size: 9px;
         line-height: 111.3%;
     }
+
     .footer-link-app-container .footer-title {
-        font-size: 8px;
-        line-height: 10px;
-        max-width: 200px;
+        font-size: 11px;
     }
+
     .footer-link-app-content {
         max-width: 81px;
     }
-    .footer-link-app-content img {
-        max-height: 24px;
-    }
+
     .footer-link-app-container {
         max-width: 200px;
     }
+
     .footer-info-contact h2 {
         font-size: 10px;
         line-height: 12px;
     }
+
     .footer-title+p,
     .footer-title+p+p {
         font-size: 9px;
     }
+
     #footer-link {
         padding-bottom: 6px;
     }
 }
 
+@media(max-width: 400px) {
+    .footer-link-app-container {
+        max-width: 200px;
+    }
+}
+
 @media(max-width: 375px) {
+
     /* Обёртки */
     .holder,
     .fixed-container {
         max-width: 350px;
         padding: 0 21px;
     }
+
     .fixed-container {
         padding: 0 12px;
     }
+
     /* Logo */
     .logo-icon {
         max-width: 47px;
     }
+
     .logo-text {
         font-size: 34px;
         line-height: 41px;
     }
+
     .title {
         margin-top: 10px;
         font-size: 33px;
         line-height: 120%;
     }
+
     .header-description {
         margin: 8px 0 17px;
         font-size: 13.2191px;
         line-height: 16px;
         text-align: center;
     }
+
     .header-content-info {
         margin: 0 auto;
     }
+
     /* Slider - карусель */
     .miura-link {
         font-size: 8px;
         line-height: 10px;
     }
-    .slider__item p {
+
+    .slider__title {
         font-size: 9px;
     }
+
     .slider .slick-arrow {
         height: 70px;
     }
+
     /* Application */
     .application-title,
     .application-title span {
@@ -1830,25 +2098,31 @@ footer {
         line-height: 20px;
         text-align: center;
     }
+
     .footer-title,
     .footer-number a {
         font-size: 11px;
     }
-    .footer-link-app-container .footer-title {
-        font-size: 9px;
-    }
+
     /* Footer */
     .footer-info-work {
         max-width: 104px;
     }
+
     .footer-info-work-block {
         max-width: 104px;
     }
+
+    .footer-link-app-container {
+        max-width: 200px;
+    }
+
     .footer-link-app-container {
         max-width: 115.89px;
         left: 130px;
         top: 637px;
     }
+
     .footer-info-contact {
         max-width: 60px;
     }
@@ -1858,8 +2132,23 @@ footer {
     .download-application-link {
         height: 80px;
     }
+
     .footer-info-work {
         max-width: 290px;
         margin-left: 4px;
+    }
+
+    .footer-link-app-container {
+        max-width: 200px;
+    }
+
+    .footer-link-app-container .footer-title {
+        font-size: 10px;
+    }
+}
+
+@media(max-width: 320px) {
+    .footer-link-app-container {
+        max-width: 200px;
     }
 }
