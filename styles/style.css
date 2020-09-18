@@ -232,6 +232,35 @@ header {
     box-shadow: 0px 0px 30px rgba(255, 253, 253, 0.8);
 }
 
+.header-content-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.header-content-logo img{
+    animation: rotate-logo 5s linear 1s;
+}
+
+.logo-title {
+    font-family: Candara;
+    text-transform: uppercase;
+    font-size: 129px;
+    line-height: 157px;
+    color: #000000;
+    animation: tra-logo 5s linear 1s;
+}
+
+@keyframes rotate-logo{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(1080deg);
+    }
+}
+
 
 /* Astimate Makisu in Yandex */
 
@@ -327,6 +356,7 @@ section:first-child {
     left: 0;
     right: 0;
     top: 10px;
+
 }
 
 .slider__title,
@@ -858,8 +888,13 @@ footer {
         display: block;
     }
 
-    .header-content-img {
-        max-width: 399px;
+    .header-content-logo img {
+        max-width: 338px;
+    }
+
+    .logo-title {
+        font-size: 113px;
+        line-height: 138px;
     }
 
     .box-estimate {
@@ -1062,8 +1097,13 @@ footer {
         line-height: 17px;
     }
 
-    .header-content-img {
-        max-width: 347.57px;
+    .header-content-logo img {
+        max-width: 295px;
+    }
+
+    .logo-title {
+        font-size: 98px;
+        line-height: 120px;
     }
 
     /* Estimate at Yandex */
@@ -1318,8 +1358,13 @@ footer {
         line-height: 13px;
     }
 
-    .header-content-img {
-        max-width: 266px;
+    .header-content-logo img {
+        max-width: 225px;
+    }
+
+    .logo-title {
+        font-size: 75px;
+        line-height: 92px;
     }
 
     /* Estimate at Yandex */
@@ -1513,10 +1558,14 @@ footer {
     /* Лишние элементы */
     .number,
     .nav-right,
-    .header-content-img,
+    .header-content-logo,
     .header-btn,
     #estimate-section {
         display: none;
+    }
+
+    .header-content-logo{
+        animation: none;
     }
 
     /* Content of header */
