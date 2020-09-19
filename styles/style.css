@@ -24,11 +24,11 @@
 }
 
 @font-face {
-	font-family: 'Candara';
-	src: url('../fonts/Candara/Candara.eot');
-	src: url('../fonts/Candara/Candara.woff') format('woff'), url('../fonts/fonts/Candara.ttf') format('truetype'), url('../fonts/fonts/Candara.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'Candara';
+    src: url('../fonts/Candara/Candara.eot');
+    src: url('../fonts/Candara/Candara.woff') format('woff'), url('../fonts/fonts/Candara.ttf') format('truetype'), url('../fonts/fonts/Candara.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 * {
@@ -87,11 +87,20 @@ header {
 }
 
 
-/* Вверхняя часть header */
-
-.header-top {
-    width: 100%;
-    padding-top: 31px;
+/* Fle=x and j-c:s-b */
+.header-top,
+.nav-left,
+.logo,
+.number,
+.nav-right,
+.header-content,
+.box-estimate,
+.application-block,
+.download-application-link,
+.footer-info,
+.footer-info-contact,
+.footer-info-work,
+.footer-link-app-block {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -100,49 +109,58 @@ header {
     justify-content: space-between;
 }
 
-.nav-left {
-    max-width: 291px;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-}
 
-.logo {
-    max-width: 154px;
-    width: 100%;
+.logo,
+.number,
+.header-content-logo,
+.box-estimate,
+.slider__item,
+.slick-track,
+.slider .slick-dots,
+.application-content,
+.download-application-block,
+.download-application-link,
+.download-application,
+.footer-info,
+.footer-info-contact,
+.footer-info-work,
+.footer-social-media {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+}
+
+
+/* Вверхняя часть header */
+.header-top {
+    width: 100%;
+    padding-top: 31px;
+
+}
+
+.nav-left {
+    max-width: 291px;
+    width: 100%;
+}
+
+.logo {
+    max-width: 154px;
+    width: 100%;
 }
 
 .logo-text {
     font-weight: 600;
-    font-size: 24.0543px;
+    font-size: 24px;
     line-height: 29px;
 }
 
 .number {
     max-width: 110px;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+
 }
 
 .number a {
@@ -154,18 +172,12 @@ header {
 .nav-right {
     max-width: 400px;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
 }
 
 .time-work,
 .address {
     font-weight: 600;
-    font-size: 17.3191px;
+    font-size: 17px;
     line-height: 111.3%;
 }
 
@@ -189,12 +201,6 @@ header {
     max-width: 1070px;
     width: 100%;
     margin: 51px auto 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
 }
 
 .header-content-info {
@@ -242,13 +248,17 @@ header {
 }
 
 .header-content-logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
-    align-items: center;
-
 }
 
 .header-content-logo img {
+    -webkit-animation: rotate-logo 5s linear;
     animation: rotate-logo 5s linear;
 }
 
@@ -258,21 +268,49 @@ header {
     font-size: 129px;
     line-height: 157px;
     color: #000000;
+    -webkit-animation: title-transform 5s ease-in-out;
     animation: title-transform 5s ease-in-out;
 }
 
-@keyframes rotate-logo {
+@-webkit-keyframes rotate-logo {
     from {
+        -webkit-transform: rotate(0);
         transform: rotate(0);
     }
 
     to {
+        -webkit-transform: rotate(720deg);
         transform: rotate(720deg);
+    }
+}
+
+@keyframes rotate-logo {
+    from {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    to {
+        -webkit-transform: rotate(720deg);
+        transform: rotate(720deg);
+    }
+}
+
+@-webkit-keyframes title-transform {
+    from {
+        -webkit-transform: translate3d(1000px, 0, 0);
+        transform: translate3d(1000px, 0, 0);
+    }
+
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
     }
 }
 
 @keyframes title-transform {
     from {
+        -webkit-transform: translate3d(1000px, 0, 0);
         transform: translate3d(1000px, 0, 0);
     }
 
@@ -298,15 +336,6 @@ section:first-child {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 8px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
 }
 
 .box-estimate h2,
@@ -361,9 +390,6 @@ section:first-child {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
     margin: 0 15px;
     border: 2px solid #A82D2D;
     border-radius: 10px;
@@ -372,6 +398,7 @@ section:first-child {
 
 .slider__title {
     padding: 4px 29px;
+    background: -o-linear-gradient(355.82deg, #FF6767 0%, #F6506A 92.71%, #F54E6A 100%);
     background: linear-gradient(94.18deg, #FF6767 0%, #F6506A 92.71%, #F54E6A 100%);
     position: absolute;
     left: 0;
@@ -409,27 +436,12 @@ section:first-child {
     display: flex;
 }
 
-.slick-track {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-
 .slider .slick-dots {
     min-height: 15px;
     margin-top: 20px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
 }
 
 .slick-dots li {
@@ -467,33 +479,6 @@ section:first-child {
     z-index: 10;
 }
 
-.slider .slick-arrow:focus .slider__title:nth-child(3n+1) {
-    animation: sliderTitleName 3s;
-}
-
-.slider .slick-arrow:focus .slider__title:nth-child(3n+2) {
-    animation: sliderTitleName 3s 3, 5s;
-}
-
-.slider .slick-arrow:focus .slider__title:nth-child(3n+1) {
-    animation: sliderTitleName 3s 7s;
-}
-
-.slider__item.slider__title.in-view {
-    background-color: black;
-    animation: sliderTitleName 3s;
-}
-
-@keyframes sliderTitleName {
-    from {
-        transform: translate(-100%, 0);
-    }
-
-    to {
-        transform: translate(0%, 0);
-    }
-}
-
 .slider .slick-arrow.slick-prev {
     -webkit-transform: rotate(-180deg);
     -ms-transform: rotate(-180deg);
@@ -509,22 +494,16 @@ section:first-child {
 /* Product */
 
 .application-section {
-    padding: 30px 0;
+    padding: 55px 0;
 }
 
 .application-content {
     max-width: 600px;
     margin-top: 83px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
 }
 
 .application-title,
@@ -540,27 +519,15 @@ section:first-child {
 
 .application-block {
     margin: 0 50px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
 }
 
 .download-application-block {
     max-width: 470px;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
 }
 
 .download-application-block h3 {
@@ -573,31 +540,16 @@ section:first-child {
     max-width: inherit;
     width: inherit;
     padding-top: 5px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
 }
 
 .download-application {
     max-width: 171px;
     width: 100%;
     text-decoration: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
 }
 
 .download-application-title {
@@ -613,7 +565,7 @@ section:first-child {
 }
 
 .red-line {
-    min-width: 2px;
+    min-width: 1px;
     width: 3px;
     height: 117px;
     margin: 0 11px;
@@ -621,69 +573,13 @@ section:first-child {
     border-radius: 2px;
 }
 
-.application-phone {
-    max-width: 447px;
-    width: 100%;
-    height: 541px;
-    background: url(../img/application-mobile-phone.png) center no-repeat;
-    background-size: contain;
-    position: relative;
+.video-application {
+    max-width: 355px;
 }
 
-.application {
-    text-align: center;
-}
-
-.application-smartphone {
-    width: 259px;
-    height: 22px;
-    font-size: 21px;
-    line-height: 15px;
-}
-
-.finger {
-    max-width: 170px;
-    max-height: 154px;
-    position: absolute;
-    top: 64%;
-    right: 22.4%;
-    /* animation: finger 4s linear 3 0.5s; */
-    opacity: 0;
+.image-application {
     display: none;
 }
-
-
-/* @keyframes finger {
-0% {
-    opacity: 1;
-}
-
-20% {
-    top: 64%;
-}
-
-79% {
-    opacity: 1;
-}
-
-80% {
-    opacity: 0.75;
-}
-
-86.7% {
-    opacity: 0.5;
-}
-
-93% {
-    opacity: 0.25;
-}
-
-100% {
-    top: 1%;
-    opacity: 0;
-}
-} */
-
 
 /* footer */
 
@@ -712,29 +608,11 @@ footer {
     max-width: 1170px;
     width: 100%;
     padding: 30px 0 24px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
 }
 
 .footer-info-contact,
 .footer-info-work {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
 }
 
 .footer-info-contact {
@@ -766,18 +644,11 @@ footer {
     font-weight: 600;
 }
 
-
 /* Links on social-media */
 
 .footer-social-media {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -ms-flex-pack: distribute;
     justify-content: space-around;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
 }
 
 #footer-link {
@@ -789,7 +660,6 @@ footer {
     -ms-flex-pack: center;
     justify-content: center;
 }
-
 
 /* Центрируем заголовок в footer-link-app*/
 
@@ -805,12 +675,6 @@ footer {
 
 .footer-link-app-block {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
 }
 
 .footer-link-app-content {
@@ -846,7 +710,7 @@ footer {
 
 @media(max-width: 1152px) {
     .holder {
-        max-width: 1067.38px;
+        max-width: 1068px;
         padding: 0 45px;
     }
 
@@ -863,7 +727,7 @@ footer {
     }
 
     .logo-text {
-        font-size: 21.9444px;
+        font-size: 22px;
         line-height: 27px;
     }
 
@@ -878,13 +742,13 @@ footer {
 
     .time-work,
     .address {
-        font-size: 15.8px;
+        font-size: 16px;
     }
 
     .title {
         max-width: 390px;
         font-weight: 800;
-        font-size: 42.1333px;
+        font-size: 42px;
         line-height: 120%;
         letter-spacing: 0.03em;
     }
@@ -895,7 +759,7 @@ footer {
 
     .header-description {
         max-width: 360px;
-        font-size: 16.6778px;
+        font-size: 17px;
         line-height: 20px;
     }
 
@@ -903,8 +767,8 @@ footer {
         width: -webkit-max-content;
         width: -moz-max-content;
         width: max-content;
-        padding: 15.8px 50px;
-        font-size: 15.8px;
+        padding: 16px 50px;
+        font-size: 16px;
         line-height: 19px;
         display: block;
     }
@@ -974,7 +838,7 @@ footer {
     }
 
     .download-application-block {
-        max-width: 412.56px;
+        max-width: 412px;
     }
 
     .download-application-block h3 {
@@ -987,28 +851,27 @@ footer {
     }
 
     .download-application img {
-        max-width: 70.22px;
+        max-width: 70px;
     }
 
     .download-application-title {
-        font-size: 24.5778px;
+        font-size: 25px;
         line-height: 30px;
     }
 
     .red-line {
-        width: 2.63px;
-        height: 102.7px;
+        width: 3px;
+        height: 103px;
     }
 
-    /* Application on phone */
-    .application-phone {
-        max-width: 392.36px;
+    .video-application {
+        max-width: 330px;
     }
 
     /* footer */
     .footer-title,
     .footer-number a {
-        font-size: 15.8px;
+        font-size: 16px;
         line-height: 19px;
     }
 
@@ -1046,12 +909,13 @@ footer {
 
     .footer-title+p,
     .footer-title+p+p {
-        font-size: 15.8px;
+        font-size: 16px;
         line-height: 111.3%;
     }
 }
 
 @media(max-width: 1024px) {
+
     .holder {
         max-width: 929px;
         padding: 0 48px;
@@ -1108,7 +972,7 @@ footer {
     }
 
     .header-description {
-        font-size: 14.5139px;
+        font-size: 14px;
         line-height: 18px;
     }
 
@@ -1130,7 +994,7 @@ footer {
     /* Estimate at Yandex */
     .box-estimate {
         max-width: 818px;
-        padding: 41.5px 52px;
+        padding: 41px 52px;
     }
 
     .box-estimate h2,
@@ -1140,11 +1004,11 @@ footer {
     }
 
     .box-estimate h2 {
-        max-width: 506.46px;
+        max-width: 506px;
     }
 
     .five-stars {
-        max-width: 228.62px;
+        max-width: 228px;
     }
 
     /* Slider - карусель */
@@ -1168,18 +1032,18 @@ footer {
 
     /* Application content */
     .application-block {
-        max-width: 810px;
+        max-width: 690px;
         margin: 0 auto;
     }
 
     .application-title,
     .application-title span {
-        font-size: 29.0278px;
+        font-size: 29px;
         line-height: 35px;
     }
 
     .application-content {
-        max-width: 459px;
+        max-width: 440px;
         margin-top: 0;
         -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1196,11 +1060,11 @@ footer {
     }
 
     .download-application {
-        max-width: 131.39px;
+        max-width: 131px;
     }
 
     .download-application img {
-        max-width: 61.11px;
+        max-width: 61px;
     }
 
     .download-application-title {
@@ -1209,14 +1073,18 @@ footer {
     }
 
     .red-line {
-        width: 2.29px;
-        height: 89.38px;
+        width: 2px;
+        height: 89px;
         margin-bottom: 12px;
     }
 
-    /* Application on phone */
-    .application-phone {
-        max-width: 300px;
+    .video-application {
+        display: none;
+    }
+
+    .image-application {
+        max-width: 196px;
+        display: block;
     }
 
     /* footer */
@@ -1252,7 +1120,7 @@ footer {
 
     .google_Play,
     .app_store {
-        max-width: 73.59px;
+        max-width: 74px;
     }
 }
 
@@ -1322,11 +1190,11 @@ footer {
     }
 
     .logo-icon {
-        max-width: 29.79px;
+        max-width: 30px;
     }
 
     .logo-text {
-        font-size: 14.6px;
+        font-size: 15px;
         line-height: 18px;
     }
 
@@ -1335,7 +1203,7 @@ footer {
     }
 
     .number img {
-        width: 14.02px;
+        width: 14px;
     }
 
     .number a {
@@ -1349,7 +1217,7 @@ footer {
 
     .time-work,
     .address {
-        font-size: 10.5px;
+        font-size: 10px;
     }
 
     .title {
@@ -1368,14 +1236,14 @@ footer {
     }
 
     .header-description {
-        font-size: 11.0965px;
+        font-size: 11px;
         line-height: 14px;
     }
 
     .header-btn {
         width: 116px;
-        padding: 10.51px 33px;
-        font-size: 10.5125px;
+        padding: 11px 33px;
+        font-size: 11px;
         line-height: 13px;
     }
 
@@ -1401,7 +1269,7 @@ footer {
     }
 
     .box-estimate h2 {
-        max-width: 387.21px;
+        max-width: 387px;
     }
 
     .five-stars {
@@ -1432,6 +1300,10 @@ footer {
     }
 
     /* Application content */
+    .application-section {
+        padding: 30px 0;
+    }
+
     .application-title,
     .application-title span {
         font-size: 22px;
@@ -1448,32 +1320,32 @@ footer {
     }
 
     .download-application {
-        max-width: 99.28px;
+        max-width: 100px;
     }
 
     .download-application img {
-        max-width: 46.72px;
+        max-width: 47px;
     }
 
     .download-application-title {
         font-size: 16px;
         line-height: 20px;
-        margin: 20.44px auto 0;
+        margin: 20px auto 0;
     }
 
     .red-line {
-        width: 2.29px;
-        height: 89.38px;
+        width: 1.75px;
+        height: 89px;
         margin-bottom: 12px;
     }
 
     /* Application on phone */
     .application-block {
-        max-width: 620px;
+        max-width: 566px;
     }
 
     .application-content {
-        max-width: 350px;
+        max-width: 334px;
     }
 
     .application-title,
@@ -1482,20 +1354,19 @@ footer {
         line-height: 27px;
     }
 
-    .application-phone {
-        max-width: 280px;
-        height: 320px;
+    .image-application {
+        max-width: 148px;
     }
 
     /* footer */
     .footer-title,
     .footer-number a {
-        font-size: 10.5125px;
+        font-size: 11px;
         line-height: 13px;
     }
 
     .footer-social-media img {
-        max-width: 18.69px;
+        max-width: 19px;
     }
 
     .footer-link-app-block {
@@ -1541,6 +1412,7 @@ footer {
     .fixed-container {
         max-width: 624px;
         padding: 0 21px;
+        box-sizing: content-box;
     }
 
     /* Background of header */
@@ -1572,7 +1444,7 @@ footer {
     }
 
     .logo-text {
-        font-size: 60.4747px;
+        font-size: 60px;
         line-height: 74px;
     }
 
@@ -1581,11 +1453,13 @@ footer {
     .nav-right,
     .header-content-logo,
     .header-btn,
-    #estimate-section {
+    #estimate-section,
+    .image-application {
         display: none;
     }
 
     .header-content-logo {
+        -webkit-animation: none;
         animation: none;
     }
 
@@ -1614,7 +1488,7 @@ footer {
 
     .header-description {
         max-width: 100%;
-        font-size: 23.5125px;
+        font-size: 24px;
         line-height: 29px;
         text-align: center;
     }
@@ -1645,31 +1519,30 @@ footer {
         padding: 35px 0;
     }
 
+    .application-block {
+        max-width: 607px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
     .application-content {
-        max-width: 472px;
-        font-size: 30.3494px;
+        max-width: 100%;
+        width: 100%;
+        font-size: 30px;
         line-height: 37px;
         text-align: center;
     }
 
     .application-title,
     .application-title span {
-        font-size: 26px;
-        line-height: 37px;
-    }
-
-    .application-phone {
-        max-width: 230px;
-        max-height: 330px;
+        max-width: 100%;
+        font-size: 33px;
+        line-height: 49px;
     }
 
     .download-application-block {
-        max-width: 320px;
-    }
-
-    .download-application-block h3 {
-        font-size: 26px;
-        line-height: 32px;
+        max-width: 474px;
     }
 
     .download-application-block h3 {
@@ -1678,11 +1551,11 @@ footer {
     }
 
     .download-application {
-        max-width: 137px;
+        max-width: 172px;
     }
 
     .download-application img {
-        max-width: 58px;
+        max-width: 80px;
     }
 
     .download-application-title {
@@ -1691,15 +1564,15 @@ footer {
     }
 
     .red-line {
-        width: 2.4px;
+        width: 3px;
         height: 93px;
     }
 
     /* footer */
     .footer-info {
-        font-size: 16.6483px;
+        font-size: 17px;
         line-height: 111.3%;
-        padding: 21.34px 0 8px;
+        padding: 21px 0 8px;
         -webkit-box-align: start;
         -ms-flex-align: start;
         align-items: flex-start;
@@ -1731,7 +1604,7 @@ footer {
     }
 
     .footer-social-media img {
-        max-width: 30.31px;
+        max-width: 30px;
     }
 
     .footer-title+p,
@@ -1742,11 +1615,11 @@ footer {
     }
 
     .footer-link-app-container {
-        max-width: 206.12px;
+        max-width: 206px;
     }
 
     .footer-link-app-content {
-        max-width: 144.07px;
+        max-width: 144px;
         height: auto;
         margin: 0 auto;
     }
@@ -1819,22 +1692,6 @@ footer {
 }
 
 @media(max-width: 580px) {
-    .download-application {
-        max-width: 120px;
-    }
-
-    .download-application-block h3 {
-        font-size: 23px;
-    }
-
-    .download-application img {
-        max-width: 48px;
-    }
-
-    .download-application-title {
-        font-size: 18px;
-    }
-
     .footer-info-work {
         margin-left: 25px;
     }
@@ -1849,17 +1706,13 @@ footer {
 
     .application-title,
     .application-title span {
-        font-size: 22px;
+        font-size: 29px;
     }
 
-    .download-application {
-        max-width: 113px;
+    .download-application-block {
+        max-width: 390px;
     }
-
-    .application-phone {
-        max-width: 206px;
-    }
-
+    
     .footer-title+p,
     .footer-title+p+p {
         font-size: 13px;
@@ -1876,24 +1729,6 @@ footer {
 }
 
 @media(max-width: 500px) {
-
-    .application-title,
-    .application-title span {
-        font-size: 20px;
-    }
-
-    .download-application {
-        max-width: 110px;
-    }
-
-    .download-application img {
-        max-width: 40px;
-    }
-
-    .download-application-title {
-        font-size: 16px;
-    }
-
     .footer-link-app-container {
         max-width: 130px;
     }
@@ -1902,15 +1737,16 @@ footer {
     .footer-title+p+p {
         font-size: 12px;
     }
-
-    .application-phone {
-        max-width: 190px;
-    }
 }
 
 @media(max-width: 480px) {
     .application-title {
         margin-bottom: 25px;
+    }
+
+    .application-title,
+    .application-title span {
+        font-size: 27px;
     }
 
     .footer-link-app-container {
@@ -1926,6 +1762,11 @@ footer {
 
 @media(max-width: 465px) {
 
+    .footer-title,
+    .footer-number a {
+        font-size: 14px;
+    }
+
     .footer-title+p,
     .footer-title+p+p {
         font-size: 11px;
@@ -1933,13 +1774,13 @@ footer {
     }
 }
 
-@media(max-width: 467px) {
-    .footer-info-work-block p {
-        font-size: 11px;
-    }
-}
-
 @media(max-width: 450px) {
+
+    .application-title,
+    .application-title span {
+        font-size: 24px;
+    }
+
     .footer-link-app-container .footer-title {
         font-size: 14px;
     }
@@ -1952,7 +1793,9 @@ footer {
 }
 
 @media(max-width: 414px) {
-
+    .holder, .fixed-container{
+        box-sizing: border-box;
+    }
     /* header */
     .title {
         font-size: 40px;
@@ -2008,32 +1851,34 @@ footer {
     }
 
     .download-application {
-        max-width: 75.27px;
-        max-height: 65.2px;
+        max-width: 75px;
+        max-height: 65px;
     }
 
     .download-application img {
-        max-width: 35px;
+        max-width: 45px;
+    }
+
+    .download-application-block {
+        max-width: 255px;
     }
 
     .download-application-title {
         margin-top: 5px;
-        font-size: 12.2529px;
+        font-size: 12px;
         line-height: 15px;
     }
 
     .red-line {
-        height: 51.2px;
-    }
-
-    .application-phone {
-        max-width: 126px;
-        max-height: 220px;
+        width: 2.75px;
+        height: 51px;
+        margin-bottom: 0;
+        border-radius: 2px;
     }
 
     /* Подвал */
     .footer-number a {
-        font-size: 12.1452px;
+        font-size: 12px;
         line-height: 15px;
     }
 
@@ -2138,7 +1983,7 @@ footer {
 
     .header-description {
         margin: 8px 0 17px;
-        font-size: 13.2191px;
+        font-size: 13px;
         line-height: 16px;
         text-align: center;
     }
@@ -2164,19 +2009,32 @@ footer {
     /* Application */
     .application-title,
     .application-title span {
-        font-size: 16px;
-        line-height: 20px;
-        text-align: center;
+        font-size: 20px;
+        line-height: 24px;
     }
 
-    .footer-title,
-    .footer-number a {
-        font-size: 11px;
+    .download-application-block h3 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .download-application img {
+        max-width: 44px;
+    }
+
+    .download-application-title {
+        font-size: 12px;
+        line-height: 15px;
     }
 
     /* Footer */
     .footer-info-work {
         max-width: 104px;
+    }
+
+    .footer-title,
+    .footer-number a {
+        font-size: 11px;
     }
 
     .footer-info-work-block {
@@ -2188,7 +2046,7 @@ footer {
     }
 
     .footer-link-app-container {
-        max-width: 115.89px;
+        max-width: 116px;
         left: 130px;
         top: 637px;
     }
