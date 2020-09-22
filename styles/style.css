@@ -347,7 +347,6 @@ section:first-child {
 }
 
 .box-estimate span,
-.product-title span,
 .application-title span {
     color: #E92C2C;
 }
@@ -365,15 +364,9 @@ section:first-child {
     max-width: 1170px;
     width: 100%;
     margin: 0 auto;
-}
-
-.product-title,
-.product-title span {
-    margin-bottom: 30px;
-    font-weight: 700;
-    font-size: 38px;
-    line-height: 46px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .slider {
@@ -803,8 +796,6 @@ footer {
     }
 
     /* Slider */
-    .product-title,
-    .product-title span,
     .application-title,
     .application-title span {
         font-size: 33px;
@@ -1012,11 +1003,6 @@ footer {
     }
 
     /* Slider - карусель */
-    .product-title,
-    .product-title span {
-        font-size: 29px;
-        line-height: 35px;
-    }
 
     .slider__title,
     .miura-link {
@@ -1169,6 +1155,12 @@ footer {
     }
 }
 
+@media(max-width: 786px) {
+    .slider__title {
+        font-size: 9px;
+    }
+}
+
 @media (max-width: 770px) {
     .slider__title {
         font-size: 14px;
@@ -1277,11 +1269,6 @@ footer {
     }
 
     /* Slider - карусель */
-    .product-title,
-    .product-title span {
-        font-size: 26px;
-        line-height: 27px;
-    }
 
     .slider__title,
     .miura-link {
@@ -1541,6 +1528,8 @@ footer {
         line-height: 49px;
     }
 
+
+
     .download-application-block {
         max-width: 474px;
     }
@@ -1712,7 +1701,7 @@ footer {
     .download-application-block {
         max-width: 390px;
     }
-    
+
     .footer-title+p,
     .footer-title+p+p {
         font-size: 13px;
@@ -1793,9 +1782,12 @@ footer {
 }
 
 @media(max-width: 414px) {
-    .holder, .fixed-container{
+
+    .holder,
+    .fixed-container {
         box-sizing: border-box;
     }
+
     /* header */
     .title {
         font-size: 40px;
@@ -2072,6 +2064,12 @@ footer {
 
     .footer-link-app-container .footer-title {
         font-size: 10px;
+    }
+}
+
+@media(max-width: 328px) {
+    .slider__title {
+        font-size: 8px;
     }
 }
 
