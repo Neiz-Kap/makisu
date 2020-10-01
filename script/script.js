@@ -30,4 +30,16 @@ $(document).ready(function() {
             scrollTop: top
         }, 2500);
     });
+
+    // let closeModalWindow = $("#cancel");
+    // let modalWindow = $(".modal-background");
+    // let htmlScroll = $("#no-scroll");
+    // let bigLogoMakisu = $(".header-content-img");
+    // let titleAfterLogo = $(".logo-title");
+    $("#cancel").on("click", function(){
+        $(".modal-background").removeAttr("style").hide();
+        $("#no-scroll").removeAttr("id");
+        $(".header-content-img").addClass("animation-rotate");
+        $(".logo-title").addClass("animation-translate");
+    });
 });

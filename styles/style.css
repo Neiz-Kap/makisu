@@ -41,6 +41,51 @@
     -webkit-font-smoothing: antialiased;
 }
 
+#no-scroll{
+    overflow: hidden;
+}
+
+/* Modal */
+.modal-background {
+    padding: 0 50px;
+    overflow: hidden;
+    /* opacity: .95; */
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+}
+
+.modal-window {
+    max-width: 1280px;
+    width: 100%;
+    /* width: 380px; */
+    /* margin: 0 auto; */
+    /* padding: 16px 20px; */
+    text-align: center;
+    background-color: #FFFFFF;
+    /* background-image: url(../img/banner.jpg); */
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .4);
+    display: flex;
+    /* position: absolute; */
+    /* z-index: 10000; */
+}
+
+#cancel {
+    cursor: pointer;
+    position: absolute;
+    right: 60px;
+    top: 60px;
+}
 
 /* Контейнеры для отступов и адаптации */
 
@@ -257,9 +302,16 @@ header {
     flex-direction: column;
 }
 
-.header-content-logo img {
+/* Animation logo rotate */
+.animation-rotate {
     -webkit-animation: rotate-logo 5s linear;
     animation: rotate-logo 5s linear;
+}
+
+/* Animation title translate */
+.animation-translate{
+    -webkit-animation: title-transform 5s ease-in-out;
+    animation: title-transform 5s ease-in-out;
 }
 
 .logo-title {
@@ -268,9 +320,9 @@ header {
     font-size: 129px;
     line-height: 157px;
     color: #000000;
-    -webkit-animation: title-transform 5s ease-in-out;
-    animation: title-transform 5s ease-in-out;
+    
 }
+
 
 @-webkit-keyframes rotate-logo {
     from {
@@ -323,7 +375,7 @@ header {
 
 /* Astimate Makisu in Yandex */
 
-section:first-child {
+#estimate-section {
     padding: 30px 0 24px;
 }
 
@@ -464,7 +516,7 @@ section:first-child {
 .slider .slick-arrow {
     width: 33px;
     height: 144px;
-    background: url('../img/vector.svg') 0 0 / 100% no-repeat;
+    background: url('../img/slider/vector.svg') 0 0 / 100% no-repeat;
     background-size: cover;
     font-size: 0;
     position: absolute;
@@ -766,7 +818,7 @@ footer {
         display: block;
     }
 
-    .header-content-logo img {
+    .header-content-img {
         max-width: 338px;
     }
 
@@ -973,7 +1025,7 @@ footer {
         line-height: 17px;
     }
 
-    .header-content-logo img {
+    .header-content-img {
         max-width: 295px;
     }
 
@@ -1168,6 +1220,9 @@ footer {
 }
 
 @media(max-width: 768px) {
+    #cancel{
+        max-width: 30px;
+    }
     .holder {
         max-width: 710px;
         padding: 0 48px;
@@ -1239,7 +1294,7 @@ footer {
         line-height: 13px;
     }
 
-    .header-content-logo img {
+    .header-content-img {
         max-width: 225px;
     }
 
@@ -1393,7 +1448,13 @@ footer {
 }
 
 @media(max-width: 667px) {
+    .modal-background{
+        padding: 0px 30px;
+    }
 
+    #cancel{
+        max-width: 25px;
+    }
     /* Обёртки */
     .holder,
     .fixed-container {
@@ -1445,7 +1506,7 @@ footer {
         display: none;
     }
 
-    .header-content-logo {
+    .animation-rotate, .animation-translate {
         -webkit-animation: none;
         animation: none;
     }
@@ -1692,7 +1753,12 @@ footer {
 }
 
 @media(max-width: 535px) {
-
+    .modal-background {
+        padding: 0px 20px;
+    }
+    #cancel {
+        max-width: 20px;
+    }
     .application-title,
     .application-title span {
         font-size: 29px;
@@ -1945,7 +2011,9 @@ footer {
 }
 
 @media(max-width: 375px) {
-
+    #cancel {
+        max-width: 17px;
+    }
     /* Обёртки */
     .holder,
     .fixed-container {
