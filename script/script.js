@@ -22,20 +22,6 @@ $(document).ready(function() {
         ]
     });
 
-    // Anmaton scroll button in header
-    $("#link-to-app").on("click", (event) => {
-        event.preventDefault();
-        let top = $("#app").offset().top;
-        $('body,html').animate({
-            scrollTop: top
-        }, 2500);
-    });
-
-    // let closeModalWindow = $("#cancel");
-    // let modalWindow = $(".modal-background");
-    // let htmlScroll = $("#no-scroll");
-    // let bigLogoMakisu = $(".header-content-img");
-    // let titleAfterLogo = $(".logo-title");
     $("#cancel").on("click", function(){
         $(".modal-background").removeAttr("style").hide();
         $("#no-scroll").removeAttr("id");

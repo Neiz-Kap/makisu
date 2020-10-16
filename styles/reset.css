@@ -131,6 +131,7 @@ a {
     vertical-align: baseline;
     background: transparent;
     text-decoration: none;
+    display: block;
 }
 
 del {

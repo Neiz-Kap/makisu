@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru" id="no-scroll">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -66,7 +65,7 @@
     <section class="modal-background">
         <img src="img/Modal-window/cancel.svg" alt="Cancel" id="cancel">
         <div class="modal-window">
-            <img src="img/Modal-window/banner.jpg" alt="Banner">
+            <img src="img/Modal-window/coffe New.jpg" alt="Banner">
         </div>
     </section>
     <header>
@@ -93,7 +92,7 @@
                         <div class="address">
                             <p class="nav-info-title">Наш адрес</p>
                             <p>Россия, С.-Пб. </p>
-                            <p>Вилеровский пер.&nbsp;6</p>
+                            <p>Вилеровский&nbsp;пер.&nbsp;6</p>
                         </div>
                     </div>
                 </nav>
@@ -103,7 +102,7 @@
                         <p class="header-description">Побалуйте себя исключительным качеством роллов и&nbsp;суши, пиццы,
                             а также натуральными десертами ручной работы от&nbsp;нашего кондитера.
                         </p>
-                        <a class="header-btn" href="#app" id="link-to-app">Заказать</a>
+                        <a class="header-btn" href="#app">Заказать</a>
                     </div>
                     <div class="header-content-logo">
                         <img src="img/header/big-logo-Makisu.svg" alt="big-logo" class="header-content-img">
@@ -248,7 +247,8 @@
                     <video autoplay loop muted="muted" class="video-application">
                         <source src="video/scroll-application.mp4">
                     </video>
-                    <img src="img/application-section/image-application.jpg" alt="image-application" class="image-application">
+                    <img src="img/application-section/image-application.jpg" alt="image-application"
+                        class="image-application">
                 </div>
             </div>
         </section>
@@ -257,47 +257,53 @@
         <div class="holder">
             <div class="footer">
                 <nav class="footer-info">
-                    <div class="footer-info-contact">
-                        <h3 class="footer-title footer-number"><a href="tel:+78123325233">33-252-33</a></h3>
-                        <p></p>
+
+                    <!-- footer info contact -->
+                    <section iv class="footer-info-contact">
+                        <h3><a href="tel:+78123325233" class="footer-number">33-252-33</a></h3>
                         <div>
-                            <h3 class="footer-title">Соц. сети</h3>
-                            <div class="footer-social-media">
-                                <a href="https://vk.com/makisu" target="_blank"><img src="img/footer_img/vk.svg"
-                                        alt="vk"></a>
-                                <a href="https://www.instagram.com/_makisu_/?hl=ru" target="_blank"><img
-                                        src="img/footer_img/inst.svg" alt="inst"></a>
+                            <h3 class="footer-title footer-contact-title">Соц. сети</h3>
+                            <div class="footer-social">
+                                <a href="https://vk.com/makisu" target="_blank">
+                                    <img src="img/footer_img/vk.svg" alt="vk">
+                                </a>
+                                <a href="https://www.instagram.com/_makisu_/?hl=ru" target="_blank">
+                                    <img src="img/footer_img/inst.svg" alt="inst">
+                                </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="footer-link-app-container">
-                        <h3 class="footer-title">Приложение на&nbsp;смартфон</h3>
-                        <div class="footer-link-app-block">
-                            <a href="https://clck.ru/Qa6D6" class="footer-link-app-content" target="_blank">
+                    </section>
+
+                    <!-- footer mobile app link -->
+                    <section class="footer-app">
+                        <h3 class="footer-title">Приложение&nbsp;на&nbsp;смартфон</h3>
+                        <div class="footer-app__item">
+                            <a href="https://clck.ru/Qa6D6" class="footer-app__item-link" target="_blank">
                                 <img src="img/footer_img/app_store.jpg" alt="AppStore">
                             </a>
-                            <a href="https://clck.ru/Qa6CB" class="footer-link-app-content" target="_blank">
+                            <a href="https://clck.ru/Qa6CB" class="footer-app__item-link" target="_blank">
                                 <img src="img/footer_img/google_play.jpg" alt="GooglePlay">
                             </a>
                         </div>
-                    </div>
-                    <div class="footer-info-work">
-                        <div class="footer-info-work-block">
+                    </section>
+
+                    <!-- footer info about work -->
+                    <section class="footer-work">
+                        <div class="footer-work__item">
                             <h3 class="footer-title">Режим работы</h3>
-                            <p>Вс&nbsp;- Чт&nbsp;11:00&nbsp;- 23:00</p>
-                            <p>Пт&nbsp;- Сб&nbsp;11:00&nbsp;- 00:00</p>
+                            <p class="footer-work__item-text">Вс&nbsp;- Чт&nbsp;11:00&nbsp;- 23:00</p>
+                            <p class="footer-work__item-text">Пт&nbsp;- Сб&nbsp;11:00&nbsp;- 00:00</p>
                         </div>
-                        <div class="footer-info-work-block">
+                        <div class="footer-work__item">
                             <h3 class="footer-title">Наш адрес</h3>
-                            <p>Россия, С.-Пб.</p>
-                            <p>Вилеровский пер.&nbsp;6</p>
+                            <p class="footer-work__item-text">Россия, С.-Пб.</p>
+                            <p class="footer-work__item-text">Вилеровский&nbsp;пер.&nbsp;6</p>
                         </div>
-                    </div>
+                    </section>
                 </nav>
-                <h4 id="footer-link">
-                    <a href="https://miura.pro/" class="miura-link" target="_blank">Дизайн сайта:
-                        Miura</a>
-                </h4>
+                <h3 id="footer-link">
+                    <a href="https://miura.pro/" class="miura-link" target="_blank">Дизайн сайта: Miura</a>
+                </h3>
             </div>
         </div>
     </footer>
